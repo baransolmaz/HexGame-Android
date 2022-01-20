@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDB79D"
+    tools:context=".BoardActivity">
+
+    <TextView
+        android:id="@+id/Game_turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Turn :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/new_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.70"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="-"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Game_turn"
+        app:layout_constraintStart_toEndOf="@+id/Game_turn"
+        app:layout_constraintTop_toTopOf="@+id/Game_turn" />
+
+    <TextView
+        android:id="@+id/p1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="275dp"
+        android:text="Player 1 :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/p1_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/p1"
+        app:layout_constraintTop_toTopOf="@+id/p1" />
+
+    <TextView
+        android:id="@+id/p2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Player 2 :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/p1"
+        app:layout_constraintTop_toBottomOf="@+id/p1" />
+
+    <TextView
+        android:id="@+id/p2_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="5dp"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/p2"
+        app:layout_constraintTop_toBottomOf="@+id/p1_score" />
+
+    <Button
+        android:id="@+id/new_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="New"
+        app:layout_constraintBottom_toTopOf="@+id/undo_button"
+        app:layout_constraintEnd_toEndOf="@+id/undo_button" />
+
+    <Button
+        android:id="@+id/undo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Undo"
+        app:layout_constraintBottom_toTopOf="@+id/reset_button"
+        app:layout_constraintEnd_toEndOf="@+id/reset_button" />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="50dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/Game_Type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game Type :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#2B2929"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/p2"
+        app:layout_constraintTop_toBottomOf="@+id/p2"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="-"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#2B2929"
+        app:layout_constraintBottom_toBottomOf="@+id/Game_Type"
+        app:layout_constraintStart_toEndOf="@+id/Game_Type" />
+
+    <TextView
+        android:id="@+id/Board_Size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Board Size :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#2B2929"
+        app:layout_constraintEnd_toEndOf="@+id/Game_Type"
+        app:layout_constraintTop_toBottomOf="@+id/Game_Type" />
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#2B2929"
+        app:layout_constraintStart_toEndOf="@+id/Board_Size"
+        app:layout_constraintStart_toStartOf="@+id/type"
+        app:layout_constraintTop_toTopOf="@+id/Board_Size" />
+
+    <TextView
+        android:id="@+id/Bot_Level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Bot Level :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#2B2929"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/Board_Size"
+        app:layout_constraintTop_toBottomOf="@+id/Board_Size" />
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#2B2929"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/size"
+        app:layout_constraintTop_toTopOf="@+id/Bot_Level" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
